@@ -3,7 +3,7 @@ module.exports = {
     "^.+\\.tsx?$": "ts-jest"
   },
   verbose: true,
-  setupFiles: ["<rootDir>/src/tests/__mocks__/browserMocks.js"],
+  //setupFiles: ["<rootDir>/src/tests/__mocks__/browserMocks.js"],
   testURL: "http://localhost:8080",
   moduleFileExtensions: ["js", "jsx", "ts", "tsx"],
   moduleDirectories: ["node_modules"],

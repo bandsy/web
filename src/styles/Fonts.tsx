@@ -1,4 +1,3 @@
-import { h } from "preact";
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`

@@ -1,0 +1,10 @@
+apiVersion: v2
+name: web
+description: Bandsy Frontend
+
+type: application
+
+# chart version
+version: 0.2.0
+# app version
+appVersion: 0.2.0

@@ -1,3 +1,4 @@
-import App from "./App.tsx";
+import App from "./App";
+import wrap from "./styled-components-ssr";
 
-export default App;
+export default wrap(App);

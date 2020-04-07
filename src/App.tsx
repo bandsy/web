@@ -1,9 +1,10 @@
 import { h } from "preact";
-import { Route, Router, RouterOnChangeArgs } from "preact-router";
+import { Route, Router } from "preact-router";
 import { ThemeProvider } from "styled-components";
 import { GridThemeProvider } from "styled-bootstrap-grid";
 import Home from "./routes/home";
 import Fonts from "./styles/Fonts";
+import Nav from "./components/Nav";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 if ((module as any).hot) {
@@ -16,6 +17,7 @@ const theme = {
   marine: "#211859",
   lightgrey: "#888695",
   grey: "#323d3e",
+  lightpink: "#faeced",
   pink: "#d98289",
   darkpink: "#d96277",
   dirtywhite: "#eeeeee",
@@ -33,23 +35,19 @@ const gridTheme = {
   }
 };
 
-const Routes = () => {
-  let currentUrl: string;
-  const handleRoute = (e: RouterOnChangeArgs) => {
-    currentUrl = e.url;
-  };
-
+const Routes = (): h.JSX.Element => {
   return (
     <div id="app">
       <Fonts />
-      <Router onChange={handleRoute}>
+      <Nav />
+      <Router>
         <Route path="/" component={Home} />
       </Router>
     </div>
   );
 };
 
-const App = () => {
+const App = (): h.JSX.Element => {
   return (
     <ThemeProvider theme={theme}>
       {/* 

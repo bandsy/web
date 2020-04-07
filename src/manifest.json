@@ -1,6 +1,6 @@
 {
-  "name": "Bandsy",
-  "short_name": "Bandsy",
+  "name": "bandsy",
+  "short_name": "bandsy",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",

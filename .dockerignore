@@ -1,0 +1,8 @@
+node_modules
+dist
+coverage
+.env
+telepresence.log
+yarn-error.log
+secret.yaml
+build

@@ -1,12 +1,12 @@
-import { FunctionalComponent, h } from "preact";
+import { h } from "preact";
 import { Container, Row, Col } from "styled-bootstrap-grid";
 import styled from "styled-components";
 
 const Test = styled.h1`
-  color: ${props => props.theme.darkpink};
+  color: ${(props): any => props.theme.darkpink};
 `;
 
-const Home: FunctionalComponent = () => {
+const Home = (): h.JSX.Element => {
   return (
     <Container>
       <Row>
