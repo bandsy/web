@@ -4,4 +4,4 @@ COPY . .
 RUN yarn
 RUN yarn build
 EXPOSE 3000
-ENTRYPOINT ["yarn", "serve"]
+ENTRYPOINT ["yarn", "docker:serve"]

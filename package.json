@@ -41,6 +41,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "serve": "gatsby serve -p 3000",
+    "docker:serve": "gatsby serve -p 3000 -H 0.0.0.0",
     "clean": "gatsby clean",
     "test": "jest ./src",
     "lint": "eslint ./src/**/*.ts ./src/**/*.tsx"
