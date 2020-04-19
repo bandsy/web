@@ -1,3 +1,5 @@
+const locales = require("./src/locales");
+
 module.exports = {
   siteMetadata: {
     title: `bandsy`,
@@ -36,7 +38,7 @@ module.exports = {
         // language JSON resource path
         path: `${__dirname}/src/locales`,
         // supported language
-        languages: [`en`, `ko`],
+        languages: locales.map(e => e.lang),
         // language file path
         defaultLanguage: `en`,
         // option to redirect to `/en` when connecting `/`
@@ -44,4 +46,4 @@ module.exports = {
       },
     },
   ],
-}
+};

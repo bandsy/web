@@ -1,42 +1,54 @@
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from "react";
+import { useIntl, Link } from "gatsby-plugin-intl";
+import { Container, Row, Col } from "styled-bootstrap-grid";
+import styled from "styled-components";
+import Button from "./Button";
+import LanguagePicker from "./LanguagePicker";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-);
+const NavBar = styled.div`
+  padding: 30px 0;
+`;
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
+interface props {
+  siteTitle: string;
+}
 
-Header.defaultProps = {
-  siteTitle: '',
+const Header = ({ siteTitle = "bandsy" }: props) => {
+  const intl = useIntl();
+  const [languagePicker, setLanguagePicker] = useState(false);
+  return (
+    <NavBar>
+      <Container>
+        <Row alignItems="center" justifyContent="between">
+          <Col col="auto">
+            <Link to="/">
+              <img
+                src={require("../images/branding/text.svg")}
+                alt={siteTitle}
+                style={{ height: "47px" }}
+              />
+            </Link>
+          </Col>
+          <Col col="auto">
+            <Button onClick={() => setLanguagePicker(true)}>
+              {intl.formatMessage({ id: "language" })}
+            </Button>
+            <Link to="/login">
+              <Button ml>{intl.formatMessage({ id: "login" })}</Button>
+            </Link>
+            <Button pink ml>
+              {intl.formatMessage({ id: "signup" })}
+            </Button>
+          </Col>
+        </Row>
+      </Container>
+
+      <LanguagePicker
+        visible={languagePicker}
+        setVisibility={setLanguagePicker}
+      />
+    </NavBar>
+  );
 };
 
 export default Header;

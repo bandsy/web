@@ -5,12 +5,14 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
+import React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
+import { ThemeProvider } from "styled-components";
+import { GridThemeProvider } from "styled-bootstrap-grid";
 
-import Header from './header';
-import './layout.css';
+import Fonts from "./Fonts";
+import Header from "./header";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -23,13 +25,41 @@ const Layout = ({ children }) => {
     }
   `);
 
+  const theme = {
+    ultramarine: "#181240",
+    marine: "#211859",
+    lightgrey: "#888695",
+    grey: "#323d3e",
+    lightpink: "#faeced",
+    pink: "#d98289",
+    darkpink: "#d96277",
+    dirtywhite: "#eeeeee",
+    white: "#ffffff",
+  };
+
+  const gridTheme = {
+    breakpoints: {
+      xxl: 1400,
+    },
+    container: {
+      maxWidth: {
+        xl: 1478,
+      },
+    },
+  };
+
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main>{children}</main>
-      </div>
-    </>
+    <ThemeProvider theme={theme}>
+      <Fonts />
+      <GridThemeProvider gridTheme={gridTheme}>
+        <>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <div>
+            <main>{children}</main>
+          </div>
+        </>
+      </GridThemeProvider>
+    </ThemeProvider>
   );
 };
 
