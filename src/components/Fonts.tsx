@@ -93,8 +93,8 @@ export default createGlobalStyle`
         width: 40px;
         height: 3px;
         border-radius: 10px;
-        top: 50%;
-        transform: translate(20px, -50%);
+        bottom: 13px;
+        transform: translate(20px);
         background-color: ${(x: any) => x.theme.ultramarine};
       }
     }
@@ -106,6 +106,12 @@ export default createGlobalStyle`
     color: ${(x: any) => x.theme.grey};
     &.pink {
       color: ${(x: any) => x.theme.darkpink}
+    }
+    &.grey {
+      color: ${(x: any) => x.theme.lightgrey}
+    }
+    &.marine {
+      color: ${(x: any) => x.theme.ultramarine}
     }
   }
   p {

@@ -9,7 +9,7 @@ const ListItem = styled.button<props>`
   padding: 17px 15px;
   border-radius: 5px;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   border: none;
   transition: all 150ms ease;
   color: ${(x: any) => (x.active ? x.theme.darkpink : x.theme.ultramarine)};
@@ -18,6 +18,7 @@ const ListItem = styled.button<props>`
   margin-left: -15px;
   margin-right: -15px;
   width: calc(100% + 30px);
+  height: 100%;
 
   &:hover {
     background-color: ${(x): any => x.theme.dirtywhite};

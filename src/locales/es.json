@@ -1,0 +1,24 @@
+{
+  "home": {
+    "title": "Inicio",
+    "pretitle": "El Bruh",
+    "slogan-pt1": "Encontrar músicos.",
+    "slogan-pt2": "Simplificado.",
+    "subtitle": "La única plataforma que encuentra músicos a nivel local o de todo el mundo en función de sus intereses personales",
+    "bannerCTA": "Encuentra tu próximo músico ahora",
+    "signupForFree": "Registrarse gratis",
+    "orStartSearching": "o comenzar a buscar ahora"
+  },
+  "login": "Iniciar sesión",
+  "signup": "Regístrate",
+  "language": "Español (España)",
+
+  "login/signup": "Iniciar sesión / Registrarse en Bandsy",
+  "email": "Correo electrónico",
+  "password": "Contraseña",
+
+  "languagePicker": {
+    "title": "Seleccione un idioma",
+    "contribute": "Traducciones de contribución"
+  }
+}

@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-interface props {
+interface props
+  extends React.DetailedHTMLProps<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  > {
   error?: boolean;
   disabled?: boolean;
-  type: string;
   label: string;
-  name: string;
 }
 
 const StyledDiv = styled.div`
@@ -50,8 +52,7 @@ const Input = (props: props) => {
   return (
     <StyledDiv>
       <StyledInput
-        name={props.name}
-        type={props.type}
+        {...props}
         onBlur={(e: any) =>
           e.target.value ? setFilled(true) : setFilled(false)
         }

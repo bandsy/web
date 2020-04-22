@@ -1,12 +1,19 @@
 {
   "home": {
-    "title": "집"
+    "title": "집",
+    "pretitle": "헛소리",
+    "slogan-pt1": "음악가 찾기.",
+    "slogan-pt2": "쉽게 한.",
+    "subtitle": "개인의 관심사에 따라 로컬 또는 전 세계에서 음악가를 찾을 수있는 유일한 플랫폼입니다.",
+    "bannerCTA": "다음 음악가를 찾으십시오.",
+    "signupForFree": "무료 가입",
+    "orStartSearching": "또는 지금 검색을 시작하십시오"
   },
   "login": "로그인",
   "signup": "가입하기",
   "language": "한국어 (한국)",
-  "greeting": "{name} 당신의 소년입니다!",
 
+  "login/signup": "로그인 / 가입 Bandsy",
   "email": "이메일",
   "password": "암호",
 

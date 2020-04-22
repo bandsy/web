@@ -4,6 +4,7 @@ interface props {
   pink?: boolean;
   blue?: boolean;
   outline?: boolean;
+  filled?: boolean;
   ml?: boolean;
   active?: boolean;
 }
@@ -12,7 +13,7 @@ const Button = styled.button<props>`
   padding: 17px 30px;
   border-radius: 5px;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   border: none;
   transition: all 150ms ease;
   color: ${(x): any => x.theme.grey};
@@ -20,12 +21,25 @@ const Button = styled.button<props>`
   cursor: pointer;
   margin-left: ${(x): any => (x.ml ? "15px" : "0px")};
 
+  svg {
+    height: 18px;
+    width: auto;
+    margin-right: 10px;
+    transform: translateY(2px);
+    path {
+      fill: ${(x): any => x.theme.grey};
+    }
+  }
+
   &:hover {
     background-color: ${(x): any => x.theme.dirtywhite};
   }
   &:active {
     color: white;
     background-color: ${(x): any => x.theme.lightgrey};
+    svg path {
+      fill: white;
+    }
   }
 
   ${(x): any =>

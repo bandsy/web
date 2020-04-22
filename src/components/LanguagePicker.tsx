@@ -59,7 +59,9 @@ const LanguagePicker = ({ visible, setVisibility }) => {
       className={visible && "visible"}
     >
       <Modal>
-        <h3 className="line">Select a language</h3>
+        <h3 className="line">
+          {intl.formatMessage({ id: "languagePicker.title" })}
+        </h3>
         <Row>
           {locales.map(e => (
             <Col key={e.lang} col={12} md={6}>

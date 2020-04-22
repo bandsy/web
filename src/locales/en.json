@@ -1,11 +1,19 @@
 {
   "home": {
-    "title": "Home"
+    "title": "Home",
+    "pretitle": "Bruh",
+    "slogan-pt1": "Finding Musicians.",
+    "slogan-pt2": "Simplified.",
+    "subtitle": "The only platform that finds musicians locally or from around the world based on your personal interests.",
+    "bannerCTA": "Find your next musician now.",
+    "signupForFree": "Signup for free",
+    "orStartSearching": "or start searching now"
   },
   "login": "Login",
   "signup": "Sign up",
   "language": "English (United Kingdom)",
-  "greeting": "Hey {name}, it's ya boi",
+
+  "login/signup": "Login / Sign up to Bandsy",
   "email": "Email",
   "password": "Password",
 
