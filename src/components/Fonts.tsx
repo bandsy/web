@@ -14,6 +14,7 @@ import RalewayExtraBoldEot from "../fonts/Raleway-Regular.eot";
 import RalewayExtraBoldTtf from "../fonts/Raleway-ExtraBold.ttf";
 import RalewayExtraBoldWoff from "../fonts/Raleway-ExtraBold.woff";
 import RalewayExtraBoldWoff2 from "../fonts/Raleway-ExtraBold.woff2";
+import { media } from "styled-bootstrap-grid";
 
 export default createGlobalStyle`
   @font-face {
@@ -56,7 +57,8 @@ export default createGlobalStyle`
   }
 
   main {
-    overflow-x: hidden;
+    overflow: hidden;
+    padding-top: 119px;
   }
 
   h1,h2,h3,h4,h5,h6,p {
@@ -64,11 +66,17 @@ export default createGlobalStyle`
   }
 
   h1 {
-    font-size: 81px;
+    font-size: 38px;
+    line-height: 1.23;
     font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     color: ${(x: any) => x.theme.ultramarine};
+
+    ${media.md`
+      font-size: 81px;
+      line-height: 1.1;
+      margin-bottom: 30px;
+    `}
   }
   h2 {
     font-size: 42px;
@@ -78,11 +86,17 @@ export default createGlobalStyle`
     color: ${(x: any) => x.theme.ultramarine};
   }
   h3 {
-    font-size: 26px;
+    font-size: 22px;
+    line-height: 1.2;
     font-weight: 700;
-    line-height: 1.15;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     color: ${(x: any) => x.theme.ultramarine};
+
+    ${media.md`
+      font-size: 26px;
+      line-height: 1.15;
+      margin-bottom: 30px;
+    `}
     
     &.line {
       position: relative;
@@ -100,9 +114,10 @@ export default createGlobalStyle`
     }
   }
   h4 {
-    font-size: 22px;
+    font-size: 18px;
+    line-height: 1.2;
     font-weight: 700;
-    line-height: 1.54;
+    margin-bottom: 30px;
     color: ${(x: any) => x.theme.grey};
     &.pink {
       color: ${(x: any) => x.theme.darkpink}
@@ -113,11 +128,21 @@ export default createGlobalStyle`
     &.marine {
       color: ${(x: any) => x.theme.ultramarine}
     }
+    ${media.md`
+      font-size: 22px;
+      line-height: 1.54;
+      margin-bottom: 30px;
+    `}
   }
   p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
     color: ${(x: any) => x.theme.grey};
+
+    ${media.md`
+      font-size: 18px;
+      line-height: 1.5;
+    `}
 
     a {
       color: ${(x: any) => x.theme.pink};

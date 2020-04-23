@@ -31,7 +31,7 @@ const BackgroundWedge = ({ top = 0 }) => (
     <StyledOverflow height={1053 + top}>
       <StyledImage
         top={top}
-        src={require("../images/background-wedge.svg")}
+        src={require("../../images/background-wedge.svg")}
         alt=""
       />
     </StyledOverflow>

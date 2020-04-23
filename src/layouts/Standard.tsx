@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { media, Container, Row, Col } from "styled-bootstrap-grid";
-import BackgroundWedge from "../components/BackgroundWedge";
-import CirclePattern from "../components/CirclePattern";
+import BackgroundWedge from "../components/shared/BackgroundWedge";
+import CirclePattern from "../components/shared/CirclePattern";
 
 const Body = styled.div`
   margin-top: 80px;

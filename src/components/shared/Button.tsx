@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "styled-bootstrap-grid";
 
 interface props {
   pink?: boolean;
@@ -10,7 +11,7 @@ interface props {
 }
 
 const Button = styled.button<props>`
-  padding: 17px 30px;
+  padding: 15px 20px;
   border-radius: 5px;
   font-size: 18px;
   font-weight: 700;
@@ -20,6 +21,11 @@ const Button = styled.button<props>`
   background: transparent;
   cursor: pointer;
   margin-left: ${(x): any => (x.ml ? "15px" : "0px")};
+  white-space: nowrap;
+
+  ${media.md`
+      padding: 17px 30px;
+    `}
 
   svg {
     height: 18px;

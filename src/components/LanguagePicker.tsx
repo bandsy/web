@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useIntl, changeLocale } from "gatsby-plugin-intl";
 import { Row, Col, media } from "styled-bootstrap-grid";
 import styled from "styled-components";
-import ListItem from "./ListItem";
+import ListItem from "./shared/ListItem";
 import locales from "../locales";
 
 const Modal = styled.div`

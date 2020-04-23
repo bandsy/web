@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface props {
   active?: boolean;
+  icon?: boolean;
 }
 
 const ListItem = styled.button<props>`
@@ -29,6 +30,26 @@ const ListItem = styled.button<props>`
   }
 
   ${x => x.active && `pointer-events: none`}
+
+  ${x =>
+    x.icon &&
+    `
+      svg {
+        height: 18px;
+        width: 27px;
+        margin-right: 10px;
+        transform: translateY(2px);
+        path {
+          fill: ${x.active ? x.theme.darkpink : x.theme.ultramarine};
+        }
+      }
+
+      &:active {
+        svg path {
+          fill: white;
+        }
+      }
+  `}
 `;
 
 export default ListItem;

@@ -1,12 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useIntl, Link, changeLocale } from "gatsby-plugin-intl";
-import styled from "styled-components";
+import React from "react";
+import { useIntl } from "gatsby-plugin-intl";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { Container, Row, Col, media } from "styled-bootstrap-grid";
-import BackgroundWedge from "../components/BackgroundWedge";
-import CirclePattern from "../components/CirclePattern";
 import StandardLayout from "../layouts/Standard";
 
 const Home = () => {

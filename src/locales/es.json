@@ -20,5 +20,14 @@
   "languagePicker": {
     "title": "Seleccione un idioma",
     "contribute": "Traducciones de contribución"
+  },
+  "userModal": {
+    "greeting": "Hola {name}",
+    "viewMyProfile": "Ver mi perfil",
+    "myFeed": "Mi feed",
+    "myListings": "Mis listados",
+    "myPayments": "Mis pagos",
+    "accountSettings": "Configuración de la cuenta",
+    "logOut": "Cerrar sesión"
   }
 }

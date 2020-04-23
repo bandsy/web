@@ -4,33 +4,50 @@ import styled from "styled-components";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import Button from "../components/Button";
-import BackgroundWedge from "../components/BackgroundWedge";
+import Button from "../components/shared/Button";
+import BackgroundWedge from "../components/shared/BackgroundWedge";
 import { Container, Row, Col, media } from "styled-bootstrap-grid";
-import CirclePattern from "../components/CirclePattern";
-import ImageWedge from "../components/ImageWedge";
+import CirclePattern from "../components/shared/CirclePattern";
+import ImageWedge from "../components/shared/ImageWedge";
 
 const Body = styled.div`
-  margin-top: 80px;
+  margin-top: 33px;
+
+  ${media.md`
+      margin-top: 80px;
+  `}
 `;
 
 const ImageContainer = styled.div`
+  ${media.xl`
   position: relative;
   margin-top: 40px;
+    `}
 
   svg:first-of-type {
     position: absolute;
-    top: -40px;
-    left: -62px;
     z-index: -1;
     width: 341px;
     height: 134px;
+    top: -40px;
+    left: -62px;
+
+    display: none;
+
+    ${media.xl`
+    display: block;
+    `}
   }
 
   svg:last-of-type {
     max-width: 821px;
     width: 100%;
     height: 100%;
+    display: none;
+
+    ${media.xl`
+      display: block;
+    `}
 
     ${media.xl`
       width: calc(821px - ((1920px - 100vw) / 2));
@@ -39,6 +56,7 @@ const ImageContainer = styled.div`
 `;
 
 const StartSearching = styled.p`
+  font-size: 18px;
   font-weight: 700;
   color: ${(x: any) => x.theme.darkpink};
   margin-left: 30px;
@@ -63,7 +81,7 @@ const Home = () => {
       <BackgroundWedge top={0} />
       <Container>
         <Row>
-          <Col lg={7}>
+          <Col xl={7}>
             <Body>
               <h3 className="line">
                 {intl.formatMessage({ id: "home.pretitle" })}
@@ -80,9 +98,11 @@ const Home = () => {
                 {intl.formatMessage({ id: "home.bannerCTA" })}
               </h4>
               <div style={{ display: "inline-flex", alignItems: "center" }}>
-                <Button blue active>
-                  {intl.formatMessage({ id: "home.signupForFree" })}
-                </Button>
+                <Link to="/signup">
+                  <Button blue active>
+                    {intl.formatMessage({ id: "home.signupForFree" })}
+                  </Button>
+                </Link>
                 <StartSearching>
                   {intl.formatMessage({ id: "home.orStartSearching" })}
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -92,7 +112,7 @@ const Home = () => {
               </div>
             </Body>
           </Col>
-          <Col lg={5}>
+          <Col xl={5}>
             <ImageContainer>
               <CirclePattern />
               <ImageWedge image={require("../images/homepage-banner.jpg")} />

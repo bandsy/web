@@ -15,6 +15,24 @@ export const useAuth = () => {
   return useContext(authContext);
 };
 
+export enum userStatus {
+  VERIFICATION_NEEDED,
+  MFA_REQUIRED,
+}
+
+export enum bandsyResponseCode {
+  ERROR_HANDLER_ERROR,
+  UNKNOWN_ERROR,
+  VALIDATION_ERROR,
+  CLIENT_ERROR,
+  SERVER_ERROR,
+  DUPLICATE_EMAIL,
+  INVALID_ACCOUNT,
+  INVALID_VERIFICATION,
+  INVALID_CREDENTIALS,
+  INVALID_MFA,
+}
+
 function useProvideAuth() {
   const [user, setUser] = useState(null);
 
@@ -35,8 +53,8 @@ function useProvideAuth() {
     )
       .then(async e => {
         if (e.ok) {
-          setUser({ verificationNeeded: true });
-          return { verificationNeeded: true };
+          setUser({ status: userStatus.VERIFICATION_NEEDED, details: {} });
+          return { status: userStatus.VERIFICATION_NEEDED, details: {} };
         }
         console.warn(e);
         console.warn(await e.json());

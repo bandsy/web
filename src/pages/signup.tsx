@@ -9,7 +9,7 @@ import Button from "../components/shared/Button";
 import Input from "../components/shared/forms/Input";
 import { useAuth } from "../auth/useAuth";
 
-const Home = () => {
+const Signup = () => {
   const intl = useIntl();
 
   const auth = useAuth();
@@ -31,14 +31,12 @@ const Home = () => {
             <h3 className="line">
               {intl.formatMessage({ id: "login/signup" })}
             </h3>
-            <Button active blue>
-              {intl.formatMessage({ id: "login" })}
-            </Button>
-            <Link to="/signup">
-              <Button ml blue>
-                {intl.formatMessage({ id: "signup" })}
-              </Button>
+            <Link to="/login">
+              <Button blue>{intl.formatMessage({ id: "login" })}</Button>
             </Link>
+            <Button ml active blue>
+              {intl.formatMessage({ id: "signup" })}
+            </Button>
             <form
               onSubmit={e => {
                 e.preventDefault();
@@ -70,4 +68,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Signup;
