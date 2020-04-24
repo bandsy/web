@@ -134,6 +134,21 @@ export default createGlobalStyle`
       margin-bottom: 30px;
     `}
   }
+  h6 {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: ${(x: any) => x.theme.grey};
+    margin-bottom: 0;
+
+    ${media.md`
+      font-size: 18px;
+    `}
+
+    &.marine {
+      color: ${(x: any) => x.theme.ultramarine};
+    }
+  }
   p {
     font-size: 16px;
     line-height: 1.5;

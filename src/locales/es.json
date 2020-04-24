@@ -29,5 +29,11 @@
     "myPayments": "Mis pagos",
     "accountSettings": "Configuración de la cuenta",
     "logOut": "Cerrar sesión"
+  },
+  "messagingModal": {
+    "messages": "Mensajes",
+    "typeAMessage": "Escriba un mensaje...",
+    "messageFromYou": "Usted: {messageContents}",
+    "chooseARecipient": "Elija un destinatario"
   }
 }

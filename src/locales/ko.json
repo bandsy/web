@@ -29,5 +29,11 @@
     "myPayments": "내 지불",
     "accountSettings": "계정 설정",
     "logOut": "로그 아웃"
+  },
+  "messagingModal": {
+    "messages": "메시지",
+    "typeAMessage": "메시지를 입력하십시오...",
+    "messageFromYou": "사용자: {messageContents}",
+    "chooseARecipient": "수취인 선택"
   }
 }

@@ -29,5 +29,11 @@
     "myPayments": "My Payments",
     "accountSettings": "Account Settings",
     "logOut": "Log out"
+  },
+  "messagingModal": {
+    "messages": "Messages",
+    "typeAMessage": "Type a message...",
+    "messageFromYou": "You: {messageContents}",
+    "chooseARecipient": "Choose a recipient"
   }
 }

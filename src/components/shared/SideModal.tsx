@@ -1,19 +1,19 @@
 import React, { useRef } from "react";
-import { useIntl, changeLocale } from "gatsby-plugin-intl";
-import { Row, Col, media } from "styled-bootstrap-grid";
+import { media } from "styled-bootstrap-grid";
 import styled from "styled-components";
-import ListItem from "./ListItem";
-import locales from "../../locales";
 
 const Modal = styled.div`
   background-color: white;
-  max-width: 603px;
-  width: 100%;
   box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.16);
 
   opacity: 0;
   transform: translateX(60px);
-  transition: all 400ms ease;
+  transition: opacity 250ms ease, transform 250ms ease;
+  max-width: 100%;
+  ${media.lg`
+  min-width: 414px;
+  width: calc(391px + ((100vw - 1480px) / 2));
+  `}
 `;
 
 const ModalContainer = styled.div<{ side: string }>`
@@ -28,7 +28,7 @@ const ModalContainer = styled.div<{ side: string }>`
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
-  transition: all 250ms ease;
+  transition: opacity 250ms ease;
 
   &.visible {
     opacity: 1;
@@ -42,23 +42,37 @@ const ModalContainer = styled.div<{ side: string }>`
 `;
 
 const ModalContents = styled.div`
-  max-width: 406px;
-  padding: 142px 30px 30px;
+  max-width: 414px;
+  padding: 142px 0 0px;
   height: 100%;
 `;
 
-const SideModal = ({ visible, setVisibility, side = "right", children }) => {
-  const intl = useIntl();
+const OverflowContent = styled.div`
+  overflow-y: auto;
+  overflow-x: visible;
+  padding: 0 30px;
+  height: 100%;
+`;
+
+const SideModal = ({
+  visible,
+  setVisibility,
+  side = "right",
+  name,
+  children,
+}) => {
   const container = useRef(null);
   return (
     <ModalContainer
       ref={container}
-      onClick={e => e.target === container.current && setVisibility(false)}
-      className={visible && "visible"}
+      onClick={e => e.target === container.current && setVisibility(name)}
+      className={visible === name && "visible"}
       side={side}
     >
       <Modal>
-        <ModalContents>{children}</ModalContents>
+        <ModalContents>
+          <OverflowContent>{children}</OverflowContent>
+        </ModalContents>
       </Modal>
     </ModalContainer>
   );
