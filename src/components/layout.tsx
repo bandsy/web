@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import { ThemeProvider } from "styled-components";
@@ -13,8 +13,11 @@ import { GridThemeProvider } from "styled-bootstrap-grid";
 
 import Fonts from "./Fonts";
 import Header from "./header";
+import useDarkMode from "../hooks/useDarkMode";
 
 const Layout = ({ children }) => {
+  const [darkMode, setDarkMode] = useDarkMode();
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,7 +28,7 @@ const Layout = ({ children }) => {
     }
   `);
 
-  const theme = {
+  const lightTheme = {
     ultramarine: "#181240",
     marine: "#211859",
     lightgrey: "#888695",
@@ -35,6 +38,18 @@ const Layout = ({ children }) => {
     darkpink: "#d96277",
     dirtywhite: "#eeeeee",
     white: "#ffffff",
+  };
+
+  const darkTheme = {
+    ultramarine: "#ffffff",
+    marine: "#211859",
+    lightgrey: "#9A97AC",
+    grey: "#EEE",
+    lightpink: "#35292A",
+    pink: "#d98289",
+    darkpink: "#d96277",
+    dirtywhite: "#222222",
+    white: "#181A1A",
   };
 
   const gridTheme = {
@@ -49,7 +64,7 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Fonts />
       <GridThemeProvider gridTheme={gridTheme}>
         <>

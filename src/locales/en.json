@@ -17,6 +17,13 @@
   "email": "Email",
   "password": "Password",
 
+  "verification": {
+    "verifyYourAccount": "Verify your account",
+    "checkEmail": "Please check your email and click on the link provided to activate your account",
+    "recieveSoon": "You should recieve this email within 5 minutes.",
+    "resendEmail": "Resend email"
+  },
+
   "languagePicker": {
     "title": "Select a language",
     "contribute": "Contribute translations"
@@ -28,7 +35,9 @@
     "myListings": "My Listings",
     "myPayments": "My Payments",
     "accountSettings": "Account Settings",
-    "logOut": "Log out"
+    "logOut": "Log out",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode"
   },
   "messagingModal": {
     "messages": "Messages",

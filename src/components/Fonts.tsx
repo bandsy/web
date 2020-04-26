@@ -50,6 +50,7 @@ export default createGlobalStyle`
   body {
     margin: 0;
     font-family: "Raleway", sans-serif;
+    background-color: ${(x: any) => x.theme.white}
   }
 
   * {
@@ -152,11 +153,13 @@ export default createGlobalStyle`
   p {
     font-size: 16px;
     line-height: 1.5;
+    margin-bottom: 20px;
     color: ${(x: any) => x.theme.grey};
 
     ${media.md`
       font-size: 18px;
       line-height: 1.5;
+      margin-bottom: 30px;
     `}
 
     a {

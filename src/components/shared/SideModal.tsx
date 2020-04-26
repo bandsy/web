@@ -3,7 +3,7 @@ import { media } from "styled-bootstrap-grid";
 import styled from "styled-components";
 
 const Modal = styled.div`
-  background-color: white;
+  background-color: ${(x: any) => x.theme.white};
   box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.16);
 
   opacity: 0;

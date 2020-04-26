@@ -17,6 +17,13 @@
   "email": "이메일",
   "password": "암호",
 
+  "verification": {
+    "verifyYourAccount": "계정 확인",
+    "checkEmail": "이메일을 확인하고 제공된 링크를 클릭하여 계정을 활성화하십시오",
+    "recieveSoon": "5 분 이내에이 이메일을 받아야합니다.",
+    "resendEmail": "이메일 재전송"
+  },
+
   "languagePicker": {
     "title": "언어를 선택하십시오",
     "contribute": "번역을 공헌하다"
@@ -28,7 +35,9 @@
     "myListings": "내 리스팅",
     "myPayments": "내 지불",
     "accountSettings": "계정 설정",
-    "logOut": "로그 아웃"
+    "logOut": "로그 아웃",
+    "darkMode": "다크 모드",
+    "lightMode": "라이트 모드"
   },
   "messagingModal": {
     "messages": "메시지",

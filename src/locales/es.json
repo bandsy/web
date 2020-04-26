@@ -17,6 +17,13 @@
   "email": "Correo electrónico",
   "password": "Contraseña",
 
+  "verification": {
+    "verifyYourAccount": "Verificar su cuenta",
+    "checkEmail": "Verifique su correo electrónico y haga clic en el enlace proporcionado para activar su cuenta",
+    "recieveSoon": "Debería recibir este correo electrónico en 5 minutos",
+    "resendEmail": "Reenviar correo electrónico"
+  },
+
   "languagePicker": {
     "title": "Seleccione un idioma",
     "contribute": "Traducciones de contribución"
@@ -28,7 +35,9 @@
     "myListings": "Mis listados",
     "myPayments": "Mis pagos",
     "accountSettings": "Configuración de la cuenta",
-    "logOut": "Cerrar sesión"
+    "logOut": "Cerrar sesión",
+    "darkMode": "Modo oscuro",
+    "lightMode": "Modo de luz"
   },
   "messagingModal": {
     "messages": "Mensajes",

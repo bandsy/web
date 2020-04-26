@@ -18,7 +18,7 @@ const NavBar = styled.div`
   background-color: transparent;
 
   &.background {
-    background-color: white;
+    background-color: ${(x: any) => x.theme.white};
   }
 `;
 
@@ -81,7 +81,7 @@ interface props {
   siteTitle: string;
 }
 
-const loggedIn = true;
+const loggedIn = false;
 
 const Header = ({ siteTitle = "bandsy" }: props) => {
   const intl = useIntl();

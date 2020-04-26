@@ -25,7 +25,7 @@ const ListItem = styled.button<props>`
     background-color: ${(x): any => x.theme.dirtywhite};
   }
   &:active {
-    color: white;
+    color: ${(x: any) => x.theme.white};
     background-color: ${(x): any => x.theme.ultramarine};
   }
 
@@ -46,7 +46,7 @@ const ListItem = styled.button<props>`
 
       &:active {
         svg path {
-          fill: white;
+          fill: ${x.theme.white};
         }
       }
   `}

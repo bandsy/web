@@ -11923,6 +11923,11 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+rsup-progress@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/rsup-progress/-/rsup-progress-1.4.0.tgz#f5dfddf6c92c8d53f4eac9a03da16dd87c66ca21"
+  integrity sha512-vdO5EI5/OXUt7l0MR2qc2S5Ffzjo6/HQzQIMS8HJ/2pRgGhKhSZRP4e+E+80xgkyS1CtXLiD3bIjqh2D72AJdA==
+
 rsvp@^4.8.4:
   version "4.8.5"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"

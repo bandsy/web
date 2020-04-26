@@ -41,10 +41,10 @@ const Button = styled.button<props>`
     background-color: ${(x): any => x.theme.dirtywhite};
   }
   &:active {
-    color: white;
+    color: ${(x: any) => x.theme.white};
     background-color: ${(x): any => x.theme.lightgrey};
     svg path {
-      fill: white;
+      fill: ${(x: any) => x.theme.white};
     }
   }
 
@@ -55,19 +55,19 @@ const Button = styled.button<props>`
     background-color: ${x.outline ? "transparent" : x.theme.lightpink};
     border: 2px solid ${x.outline ? x.theme.darkpink : "transparent"};
     &:hover {
-      color: white;
+      color: ${x.theme.white};
       background-color: ${x.theme.darkpink};
       border-color: transparent;
     }
     &:active {
-      color: white;
+      color: ${x.theme.white};
       background-color: ${x.theme.pink};
       border-color: transparent;
     }
 
     ${x.active &&
       `
-      color: white;
+      color: ${x.theme.white};
       background-color: ${x.theme.darkpink};
       border-color: transparent;
     `}
@@ -79,19 +79,19 @@ const Button = styled.button<props>`
     background-color: ${x.outline ? "transparent" : x.theme.dirtywhite};
     border: 2px solid ${x.outline ? x.theme.ultramarine : "transparent"};
     &:hover {
-      color: white;
+      color: ${x.theme.white};
       background-color: ${x.theme.ultramarine};
       border-color: transparent;
     }
     &:active {
-      color: white;
+      color: ${x.theme.white};
       background-color: #2a2644;
       border-color: transparent;
     }
 
     ${x.active &&
       `
-      color: white;
+      color: ${x.theme.white};
       background-color: ${x.theme.ultramarine};
       border-color: transparent;
     `}
