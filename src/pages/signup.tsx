@@ -56,7 +56,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
 
   const renderBody = () => {
-    if (auth.user?.status === userStatus.VERIFICATION_NEEDED) {
+    if (auth?.user?.status === userStatus.VERIFICATION_NEEDED) {
       return (
         <>
           <h3 className="line">
@@ -99,6 +99,9 @@ const Signup = () => {
             value={password}
             onChange={e => setPassword(e.target.value)}
           ></Input>
+          <Button role="submit" pink>
+            {intl.formatMessage({ id: "signup" })}
+          </Button>
         </form>
       </>
     );

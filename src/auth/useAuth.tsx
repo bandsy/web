@@ -1,14 +1,20 @@
 import React, { useState, useContext, createContext } from "react";
 import Cookie from "universal-cookie";
-import Progress from "rsup-progress";
 
 const authContext = createContext();
 const cookie = new Cookie();
 
-const progress = new Progress({
-  height: 5,
-  color: "#D96277",
-});
+let progress = null;
+
+if (typeof window !== "undefined") {
+  (async () => {
+    const Progress = await import("rsup-progress");
+    progress = new Progress.default({
+      height: 5,
+      color: "#D96277",
+    });
+  })();
+}
 
 // Provider component that wraps your app and makes auth object ...
 // ... available to any child component that calls useAuth().
@@ -49,7 +55,7 @@ function useProvideAuth() {
   // }
 
   const register = async (email: string, password: string) => {
-    return progress.promise(
+    return progress?.promise(
       fetch("https://dev.identity.bandsy.app/api/v1/visitor/bandsy/register", {
         method: "POST",
         body: JSON.stringify({ email, password }),
